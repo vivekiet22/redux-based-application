@@ -33,21 +33,14 @@ function App() {
           <Route
             exact
             path="/posts/:postId"
-            render={() => (
-              <React.Fragment>
-                <SinglePostPage/>
+            component={SinglePostPage}
                 
-              </React.Fragment>
-            )}
+        
           />
           <Route
             exact
             path="/editPost/:postId"
-            render={() => (
-              <React.Fragment>
-                <EditPostForm/>
-              </React.Fragment>
-            )}
+            component={EditPostForm}
           />
           <Redirect to="/" />
         </Switch>
